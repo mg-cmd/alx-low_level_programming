@@ -1,36 +1,27 @@
 #include <stdio.h>
 
-#include <string.h>
-
 
 
 /**
  *
- * *main - Main function of my project
+ *  * main - Entry point
+ *  *
+ *   * Description: prints "\"Programming is like building a multilingual puzzl"
  *
- * *
+ *    * Return: 0
  *
- * *
- *
- * *Return: return 0 everytime
- *
- * */
+ *     */
+
+
 
 int main(void)
 
+
+
 {
 
+	puts("\"Programming is like building a multilingual puzzle");
 
-
-		char displayed[52];
-
-
-
-			strcpy(displayed, "\"Programming is like building a multilingual puzzle");
-
-				puts(displayed);
-
-					return (0);
+	return (0);
 
 }
-

@@ -1,14 +1,18 @@
 #include <stdio.h>
 
+
+
 /**
  *
- *  * main - Entry point
+ * * main - prints out a string via printf
  *
- *   *
+ * * Description: Program that prints out the string s followed by a new line
  *
- *    * Return: Always 0 (Success)
+ * * Return: int 0 when done and no errors
  *
- *     */
+ * */
+
+
 
 int main(void)
 

@@ -17,7 +17,7 @@
  *
  * * it just won't pass because there are prob other things in buffer
  *
- * */
+ */
 
 int main(void)
 

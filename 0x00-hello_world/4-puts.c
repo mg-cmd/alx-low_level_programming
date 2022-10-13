@@ -1,21 +1,15 @@
 #include <stdio.h>
-
 /**
  *
- *  *main - entry point
+ * * main - prints out a string via printf
  *
- *   *
+ * * Description: Program that prints out the string s followed by a new line
  *
- *    *Return: 0 after printing the function
+ * * Return: int 0 when done and no errors
  *
- *     */
-
+ * */
 int main(void)
-
 {
-
-	puts("\"Programming is like building a multilingual puzzle");
-
-	return (0);
-
+		printf("with proper grammar, but the outcome is a piece of art,\n");
+            		return (0);
 }

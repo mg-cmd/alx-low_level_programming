@@ -1,23 +1,33 @@
-include <stdio.h>
-#include <ctype.h>
+#include <stdio.h>
+
 /**
-*main - Program to print alphabet letters except q and e followed by new line
-*
-*Return: return 0
-*/
+ * main - entry point
+ * Description: print the alphabet using putchar.
+ * Return: 0
+ */
+
 int main(void)
 {
-	int letter;
+	char letter = 'a';
+	char z = 'z';
 
-	for (letter = 'a'; letter <= 'z'; letter++)
+	while (letter <= z)
 	{
-		if (letter == 'q' || letter == 'e')
+		if (letter == 'q')
 		{
-			continue;
+			letter++;
 		}
-		putchar(letter);
+		else
+		{
+			if (letter == 'e')
+			{
+				letter++;
+			}
+		}
+		putchar (letter);
+		letter++;
 	}
-	putchar('\n');
+	putchar ('\n');
+
 	return (0);
 }
-

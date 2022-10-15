@@ -1,39 +1,18 @@
 #include <stdio.h>
-
-
-
-/*
- *
- *   * main - Prints the alphabet at reverse
- *
- *     *
- *
- *       * Return: Always (Success)
- *
- */
-
+#include <ctype.h>
+/**
+*main - Program to print alphabet letters in reverse followed by new line
+*
+*Return: return 0
+*/
 int main(void)
-
 {
+	int letter;
 
-		char c;
-
-
-
-			for (c = 'z'; c >= 'a'; c--)
-
-					{
-
-								putchar(c);
-
-					}
-
-
-
-				putchar('\n');
-
-
-
-					return (0);
-
+	for (letter = 'z'; letter >= 'a'; letter--)
+	{
+		putchar(letter);
+	}
+	putchar('\n');
+	return (0);
 }

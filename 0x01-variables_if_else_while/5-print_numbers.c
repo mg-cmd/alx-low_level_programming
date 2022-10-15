@@ -1,20 +1,18 @@
-include <stdio.h>
+#include <stdio.h>
+#include <ctype.h>
 /**
- * main - entry point
- * Description: print the alphabet using putchar.
- * Return: 0
- */
+*main - Prints all single digits of base 10 followed by new line
+*
+*Return: returns 0
+*/
 int main(void)
 {
-	int number = 0;
-	int max = 9;
+	int digit;
 
-	while (number <= max)
+	for (digit = '0'; digit <= '9'; digit++)
 	{
-		printf("%d", number);
-		number++;
+		putchar(digit);
 	}
-	putchar ('\n');
-
+	putchar('\n');
 	return (0);
 }

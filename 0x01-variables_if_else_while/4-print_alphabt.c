@@ -1,47 +1,23 @@
-#include <stdio.h>
-
-
-
-/*
- *
- *   * main - Prints some letters of alphabet
- *
- *     *
- *
- *       * Return: Always (Success)
- *
- *
- */
-
+include <stdio.h>
+#include <ctype.h>
+/**
+*main - Program to print alphabet letters except q and e followed by new line
+*
+*Return: return 0
+*/
 int main(void)
-
 {
+	int letter;
 
-		char c;
-
-
-
-			for (c = 'a'; c <= 'z'; c++)
-
-					{
-
-								if (c != 'e' && c != 'q')
-
-											{
-
-															putchar(c);
-
-																	}
-
-									}
-
-
-
-				putchar('\n');
-
-
-
-					return (0);
-
+	for (letter = 'a'; letter <= 'z'; letter++)
+	{
+		if (letter == 'q' || letter == 'e')
+		{
+			continue;
+		}
+		putchar(letter);
+	}
+	putchar('\n');
+	return (0);
 }
 

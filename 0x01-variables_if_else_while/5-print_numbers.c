@@ -1,39 +1,20 @@
-#include <stdio.h>
-
-
-
-/*
- *
- *   * main - Prints the numbers since 0 to 9
- *
- *     *
- *
- *       * Return: Always (Success)
- *
+include <stdio.h>
+/**
+ * main - entry point
+ * Description: print the alphabet using putchar.
+ * Return: 0
  */
-
 int main(void)
-
 {
+	int number = 0;
+	int max = 9;
 
-		char n;
+	while (number <= max)
+	{
+		printf("%d", number);
+		number++;
+	}
+	putchar ('\n');
 
-
-
-			for (n = '0'; n <= '9'; n++)
-
-					{
-
-								putchar(n);
-
-									}
-
-
-
-				putchar('\n');
-
-
-
-					return (0);
-
+	return (0);
 }

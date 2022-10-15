@@ -1,93 +1,32 @@
 #include <stdio.h>
-
-
-
-/*
- *
- *   * main - Prints 3 combination of numbers
- *
- *     *
- *
- *       * Return: Always (Success)
- *
- */
-
+/**
+*main - Prints all combinations of two two digits with,
+* and space followed by new line
+*
+*Return: returns 0
+*/
 int main(void)
-
 {
+	int digit1, digit2;
 
-		int c, i, k, j;
+	for (digit1 = 0; digit1 <= 98; digit1++)
+	{
+		for (digit2 = digit1 + 1; digit2 <= 99; digit2++)
+		{
+			putchar((digit1 / 10) + '0');
+			putchar((digit1 % 10) + '0');
+			putchar(32);
+			putchar((digit2 / 10) + '0');
+			putchar((digit2 % 10) + '0');
 
-
-
-			for (c = 48; c <= 57; c++)
-
-					{
-
-								for (i = 48; i <= 57; i++)
-
-											{
-
-															for (k = 48; k <= 57; k++)
-
-																			{
-
-																								for (j = 48; j <= 57; j++)
-
-																													{
-
-																																			if (((k + j) > (c + i) &&  k >= c) || c < k)
-
-																																									{
-
-																																																putchar(c);
-
-																																																						putchar(i);
-
-																																																												putchar(' ');
-
-																																																																		putchar(k);
-
-																																																																								putchar(j);
-
-
-
-																																																																													if (c + i + k + j == 227 && c == 57)
-
-																																																																																			{
-
-																																																																																									break;
-
-																																																																																														}
-
-																																																																																		else
-
-																																																																																								{
-
-																																																																																														putchar(',');
-
-																																																																																																			putchar(' ');
-
-																																																																																																								}
-
-																																																																																							}
-
-																																							}
-
-																											}
-
-																	}
-
-									}
-
-
-
-				putchar('\n');
-
-
-
-					return (0);
-
+			if (digit1 / 10 != 9 || digit1 % 10 != 8)
+			{
+				putchar(44);
+				putchar(32);
+			}
+		}
+	}
+	putchar(10);
+	return (0);
 }
-
 

@@ -1,25 +1,23 @@
 #include "main.h"
 
 /**
+ * _isalpha - check the code for ALX School students.
  *
- * *_isalpha - controls if a character is alphabetical
+ * @c: is c an integer argument
  *
- * *@c: character to be verified
- *
- * *Return: return 0 or 1
- *
- * */
+ * Return: Always 0.
+ */
 
 int _isalpha(int c)
-
 {
 
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-
+	if (c >= 97 && c <= 122)
+	{
 		return (1);
-
-
-
+	}
+	else if (c >= 65 && c <= 90)
+	{
+		return (1);
+	}
 	return (0);
-
 }

@@ -1,21 +1,7 @@
-#include "holberton.h"
-#include <stdio.h>
-
-/**
- * main - check the code for ALX School students.
- *
- * Return: Always 0.
- */
-int main(void)
-{
-    char *s = "hello";
-    char *f;
-
-    f = _strchr(s, 'l');
-
-    if (f != NULL)
-    {
-        printf("%s\n", f);
-    }
-    return (0);
+#include <stdio.h>  
+int main()   
+{  
+printf (" Welcome to the JAVATPOINT ");  
+printf( " \n It is an int main() function to return a value. " );  
+return 0;  
 }

@@ -1,101 +1,27 @@
-#include <stdio.h>
+#ifndef _VARIADIC_FUNCTIONS_H_
+#define _VARIADIC_FUNCTIONS_H_
 
+#include <stdio.h>
 #include <stdarg.h>
 
-#include "variadic_functions.h"
-
-
-
+int sum_them_all(const unsigned int n, ...);
+void print_numbers(const char *separator, const unsigned int n, ...);
+void print_strings(const char *separator, const unsigned int n, ...);
+void print_all(const char * const format, ...);
 /**
- *
- * * print_all - print char, integer, float and string
- *
- * * @format: format
- *
- * */
-
-void print_all(const char * const format, ...)
-
+ * struct p - checker struct
+ * @p: possibility
+ * @f: Function to be used
+ */
+typedef struct p
 {
+  char *p;
+  void (*f)(va_list);
+} checker;
 
-		va_list list;
+void print_c(va_list);
+void print_i(va_list);
+void print_f(va_list);
+void print_s(va_list);
 
-			unsigned int j = 0, start = 0;
-
-				char *p;
-
-
-
-					va_start(list, format);
-
-						while (format && format[j] != '\0')
-
-								{
-
-											switch (format[j])
-
-														{ case 'c':
-
-																		switch (start)
-
-																						{ case 1: printf(", "); }
-
-																					start = 1;
-
-																								printf("%c", va_arg(list, int));
-
-																											break;
-
-																														case 'i':
-
-																														switch (start)
-
-																																		{ case 1: printf(", "); }
-
-																																	start = 1;
-
-																																				printf("%i", va_arg(list, int));
-
-																																							break;
-
-																																									case 'f':
-
-																																										switch (start)
-
-																																														{ case 1: printf(", "); }
-
-																																													start = 1;
-
-																																																printf("%f", va_arg(list, double));
-
-																																																			break;
-
-																																																					case's':
-
-																																																						switch (start)
-
-																																																										{ case 1: printf(", "); }
-
-																																																									start = 1;
-
-																																																												p = va_arg(list, char*);
-
-																																																															if (p)
-
-																																																																			{ printf("%s", p);
-
-																																																																							break; }
-
-																																																																		printf("%p", p);
-
-																																																																					break; }
-
-													j++;
-
-														}
-
-							printf("\n");
-
-								va_end(list);
-
-}
+#endif
